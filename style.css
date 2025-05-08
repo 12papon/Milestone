@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header design */
+header{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: auto;
+    padding: 8px 20px;
+    background-color: rgb(56, 55, 55);
+}
+.top div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .4s;
+}
+.top div img{
+    cursor: pointer;
+}
+/* Module design */
+.module{
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(46, 41, 41);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+.thumbnail{
+    width: 70%;
+
+}
+
+.milestone{
+    width: 30%;
+    height: 417px;
+    max-height: 417px;
+    overflow: scroll;
+    background-color: rgb(41, 9, 9);
+    border-radius: 8px;
+    border: 1px solid tomato;
+    padding: 30px;
+    color: wheat;
+}
+.list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.item{
+    margin-bottom: 10px;
+    border-bottom: 1px solid wheat;
+}
+.list div{
+    margin-right: 15px;
+}
+.list p{
+    font-size: 17px;
+}
+.sub-item p{
+    padding-bottom: 13px;
+}
+.hidden-item{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 16px;
+    flex-direction: column;
+    cursor: pointer;
+    color: rgb(141, 141, 141);
+    padding: 10px 27px;
+    visibility: collapse;
+    height: 0;
+}
+.show{
+    visibility: visible;
+    height: auto;
+}
+.milestone::-webkit-scrollbar{
+    display: none;
+}
+.img img{
+    width: 100%;
+    border: 1px solid tomato;
+    border-radius: 8px;
+}
+.details{
+    color: wheat;
+    padding: 18px;
+}
+.details h1{
+    font-size: 25px;
+    letter-spacing: .02em;
+    line-height: 1.3em;
+}
+.details p{
+    font-size: 18px;
+}
+@media screen and (max-width: 1080px) {
+    .top div{
+        justify-content: space-around;
+    }
+    .module{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .thumbnail{
+        width: 100%;
+    }
+    .milestone{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .top div{
+            justify-content: space-evenly;
+    }
+    .thumbnail{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .milestone{
+        width: 100%;
+    }
+}
