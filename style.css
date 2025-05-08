@@ -75,8 +75,13 @@ header{
     cursor: pointer;
     color: rgb(141, 141, 141);
     padding: 10px 27px;
-    visibility: collapse;
-    height: 0;
+    visibility: visible;
+    /* height: 0; */
+}
+.thumbnailImage{
+    -webkit-transition: .9s linear;
+    -moz-transition: .9s linear;
+    transition: .9s linear;
 }
 .show{
     visibility: visible;
