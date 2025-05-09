@@ -49,29 +49,35 @@ const mainData = JSON.parse(data).data;
         this.style.opacity = '1';   
     };
         
-
+    let arr = [];
     function changlist(check, id){
         const milestone = document.querySelector('.milestone');
         const singleMileStone = document.querySelector('.item');
         const doneList = document.querySelector('.doneList');
         const item = document.getElementById(id);
-                console.log(item);
                 if(check.checked){
                     milestone.removeChild(item);
                     doneList.appendChild(item);
-                    // singleMileStone.remove(id);
-                    // doneList.appendChild(item);
                 }else{
                     item.remove();
-                    milestone.appendChild(item)
-                                        // milestone.appendChild(item);
-                    // doneList.remove(item);
+                    milestone.appendChild(item);
+                    milestone.appendChild(item).sort(function(a, b){return a - b})
                 }
-        // }else{
-        //     milestone.appendChild(currentItem);
-        //     doneList.remove(currentItem);
-        // }
     }
+
+    const milestoneELE = document.querySelector('.milestone').children;
+    for(let i = 0; i < milestoneELE.length; i++){
+        arr.push(milestoneELE[i].id);
+    }
+    
+        
+    
+    // const item = document.querySelectorAll('.item');
+    //   for(let i = 0; i < item.length; i++){
+    //       arr = item[i].id;
+    //   }
+      
+    
 
 
 
